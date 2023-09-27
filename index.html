@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Calculadora IMC </title>
+</head>
+<body>
+    <h1>Calculadora IMC!</h1>
+
+    <script>
+        var peso = parseFloat(window.prompt("Informe seu Peso: "))
+        var altura = parseFloat(window.prompt("Informe sua Altura: "))
+
+        var imc = peso / (altura * altura)
+
+        if (imc <= 18.5){
+            document.write("Seu imc É: " + imc + ", Você esta Abaixo do Peso!")  
+        }
+        else if (imc <= 24.9){
+            document.write("Seu imc É: " + imc + ", Peso ideal (parabéns)!")  
+        }
+        else if (imc <= 29.9){
+            document.write("Seu imc É: " + imc + ", Levemente acima do Peso!")  
+        }
+        else if (imc <= 34.9){
+            document.write("Seu imc É: " + imc + ", Obesidade Grau I!")  
+        }
+        else if (imc <= 39.9){
+            document.write("Seu imc É: " + imc + ", Obesidade Grau II (Severa)!")  
+        }
+        else if (imc >= 40){
+            document.write("Seu imc É: " + imc + ", Obesidade Grau III (Mórbida)!")  
+        }
+        else {
+            alert('Informe um Peso ou Altura validos.')
+            window.location.href = 'imc.html'
+        }
+
+        /*
+            50 / 1,75 abaixo
+            75 / 1,75 ideal 
+            82,45 / 177 acima
+            80 / 160 I
+            60 / 135 II
+            90 / 150 III
+ 
+
+        */
+    </script>
+</body>
+</html>
+
